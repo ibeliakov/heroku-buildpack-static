@@ -17,12 +17,8 @@ http {
 
   server_tokens off;
 
-<% if whitelist %>
-  <% whitelistedIpList.each do |ip| %>
-    allow <%= ip %>
-  <% end %>
+  allow 217.196.161.118
   deny all;
-<% end %>
 
 <% if logging['access'] %>
   access_log logs/access.log;
