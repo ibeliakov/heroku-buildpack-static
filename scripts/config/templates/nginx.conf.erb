@@ -17,6 +17,13 @@ http {
 
   server_tokens off;
 
+<% if whitelist %>
+  <% whitelistedIpList.each do |ip| %>
+    allow <%= ip %>
+  <% end %>
+  deny all;
+<% end %>
+
 <% if logging['access'] %>
   access_log logs/access.log;
 <% else %>
