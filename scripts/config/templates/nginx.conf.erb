@@ -17,9 +17,6 @@ http {
 
   server_tokens off;
 
-  allow 217.196.161.118
-  deny all;
-
 <% if logging['access'] %>
   access_log logs/access.log;
 <% else %>
