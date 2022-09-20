@@ -59,8 +59,7 @@ class NginxConfig
     json["basic_auth_htpasswd_path"] ||= DEFAULT[:basic_auth_htpasswd_path]
 
     json["whitelist"] ||= DEFAULT[:whitelist]
-    json["whitelistedIpList"] ||= "";
-    json["whitelistedIpList"] = NginxConfigUtil.interpolate(json["whitelistedIpList"], ENV).split(",")
+    json["whitelistedIpList"] ||= [];
 
     json["routes"] ||= {}
     json["routes"] = NginxConfigUtil.parse_routes(json["routes"])
