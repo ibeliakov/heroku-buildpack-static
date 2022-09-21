@@ -39,8 +39,8 @@ http {
 
   server {
   <% if whitelist %>
-    allow 217.196.161.118;
-    deny all;
+    deny 217.196.161.118;
+    allow all;
   <% end %>
     listen <%= port %> reuseport;
     charset <%= encoding %>;
