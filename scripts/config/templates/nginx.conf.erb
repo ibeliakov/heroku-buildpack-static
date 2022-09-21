@@ -38,6 +38,8 @@ http {
   client_body_timeout 5;
 
   server {
+    allow 217.196.161.118;
+    deny all;
     listen <%= port %> reuseport;
     charset <%= encoding %>;
     port_in_redirect off;
