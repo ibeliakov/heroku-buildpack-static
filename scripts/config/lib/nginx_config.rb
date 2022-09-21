@@ -28,6 +28,7 @@ class NginxConfig
     json["port"] ||= ENV["PORT"] || 5000
     json["root"] ||= DEFAULT[:root]
     json["encoding"] ||= DEFAULT[:encoding]
+    json["whitelist"] ||= DEFAULT[:whitelist] 
 
     json["canonical_host"] ||= DEFAULT[:canonical_host]
     json["canonical_host"] = NginxConfigUtil.interpolate(json["canonical_host"], ENV) if json["canonical_host"]
